@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
 namespace Automattic\Jetpack\Connection;
 
@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @package automattic/jetpack-connection
  */
-class Test_Package_Version extends TestCase {
+class Package_Version_Test extends TestCase {
 
 	/**
 	 * Tests that the connction package version is added to the package verions array obtained by the

@@ -1,5 +1,4 @@
-<?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
+<?php
 /**
  * Tests the Identity_Crisis package.
  *
@@ -16,7 +15,7 @@ use WorDBless\BaseTestCase;
 /**
  * Test Identity_Crisis class
  */
-class Test_Identity_Crisis extends BaseTestCase {
+class Identity_Crisis_Test extends BaseTestCase {
 
 	const TEST_URL = 'https://www.example.org/test';
 

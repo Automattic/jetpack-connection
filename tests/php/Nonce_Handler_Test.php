@@ -1,5 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
+<?php
 /**
  * The nonce handler tests.
  *
@@ -13,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * The nonce handler tests.
  */
-class Test_Nonce_Handler extends TestCase {
+class Nonce_Handler_Test extends TestCase {
 
 	/**
 	 * The nonce timestamp.

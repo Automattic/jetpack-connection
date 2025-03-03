@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Unit tests for the Connection Webhooks class.
  *
@@ -13,14 +13,12 @@ use Brain\Monkey;
 use PHPUnit\Framework\TestCase;
 use WP_Error;
 
-// phpcs:disable WordPress.Security.NonceVerification.Recommended
-
 /**
  * Unit tests for the Connection Webhooks class.
  *
  * @see \Automattic\Jetpack\Connection\Webhooks
  */
-class Test_Webhooks extends TestCase {
+class Webhooks_Test extends TestCase {
 
 	/**
 	 * The redirects captured by the `wp_safe_redirect()` mock function.
@@ -111,7 +109,7 @@ class Test_Webhooks extends TestCase {
 		$webhooks->handle_authorize();
 
 		remove_action( 'jetpack_client_authorized', $success_handler );
-		unset( $_GET['redirect'] ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		unset( $_GET['redirect'] );
 
 		static::assertTrue( $success_handler_called );
 		static::assertEquals( array( '/wp-admin/?something' ), $this->redirect_stack );

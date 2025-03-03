@@ -1,5 +1,4 @@
-<?php //phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
+<?php
 /**
  * Tests the URL_Secret class.
  *
@@ -17,7 +16,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @package automattic/jetpack-identity-crisis
  */
-class Test_URL_Secret extends TestCase {
+class URL_Secret_Test extends TestCase {
 
 	/**
 	 * Cleanup after each test.

@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
 namespace Automattic\Jetpack\Connection;
 
@@ -12,7 +12,7 @@ use WorDBless\BaseTestCase;
  *
  * @package automattic/jetpack-connection
  */
-class Test_Server_Sandbox extends BaseTestCase {
+class Server_Sandbox_Test extends BaseTestCase {
 
 	use \Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 
@@ -199,7 +199,7 @@ class Test_Server_Sandbox extends BaseTestCase {
 		( new Tokens() )->update_blog_token( 'asdasd.qweqwe' );
 
 		$body      = 'bbooddyy';
-		$body_hash = base64_encode( sha1( $body, true ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
+		$body_hash = base64_encode( sha1( $body, true ) );
 		$method    = 'GET';
 		$timestamp = time();
 		$headers   = array(

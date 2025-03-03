@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.NotHyphenatedLowercase
+<?php
 /**
  * Connection Manager functionality testing.
  *
@@ -7,6 +7,7 @@
 
 namespace Automattic\Jetpack\Connection;
 
+use Automattic\Jetpack\Constants;
 use Jetpack_IXR_ClientMulticall;
 use WorDBless\BaseTestCase;
 
@@ -19,6 +20,23 @@ require_once ABSPATH . WPINC . '/IXR/class-IXR-clientmulticall.php';
  * @package Automattic\Jetpack\Connection
  */
 class Jetpack_IXR_ClientMulticall_Test extends BaseTestCase {
+
+	/**
+	 * Set up before each test
+	 */
+	protected function set_up() {
+		Constants::set_constant( 'JETPACK__API_BASE', 'https://jetpack.wordpress.com/jetpack.' );
+	}
+
+	/**
+	 * Clean up the testing environment.
+	 *
+	 * @after
+	 */
+	public function tear_down() {
+		Constants::clear_constants();
+	}
+
 	/**
 	 * Test ::sort_calls() preserves the relative order of equal items.
 	 */

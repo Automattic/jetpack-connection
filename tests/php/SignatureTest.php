@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * The SignatureTest class file.
  *
@@ -240,11 +240,11 @@ class SignatureTest extends TestCase {
 			$_SERVER['HTTPS'] = 'on'; // is_ssl will return true.
 		}
 
-		if ( $_SERVER['HTTP_X_FORWARDED_PORT'] === null ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+		if ( $_SERVER['HTTP_X_FORWARDED_PORT'] === null ) {
 			unset( $_SERVER['HTTP_X_FORWARDED_PORT'] );
 		}
 
-		if ( $_SERVER['SERVER_PORT'] === null ) { // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+		if ( $_SERVER['SERVER_PORT'] === null ) {
 			unset( $_SERVER['SERVER_PORT'] );
 		}
 

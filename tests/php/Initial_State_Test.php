@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
 namespace Automattic\Jetpack\Connection;
 
@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @package automattic/jetpack-connection
  */
-class Test_Initial_State extends TestCase {
+class Initial_State_Test extends TestCase {
 
 	/**
 	 * Ensures that all of the expected fields and no other fields are returned by get_data().
@@ -53,7 +53,6 @@ class Test_Initial_State extends TestCase {
 
 		$actual_value = Initial_State::render();
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		unset( $_GET['calypso_env'] );
 
 		$this->assertEquals( $expected_value, $actual_value );

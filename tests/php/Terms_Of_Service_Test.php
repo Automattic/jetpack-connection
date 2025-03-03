@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Tests the TOS package.
  *
@@ -13,11 +13,11 @@ use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Class Test_Terms_Of_Service
+ * Class Terms_Of_Service_Test
  *
  * @package Automattic\Jetpack
  */
-class Test_Terms_Of_Service extends TestCase {
+class Terms_Of_Service_Test extends TestCase {
 	use MockeryPHPUnitIntegration;
 
 	/**

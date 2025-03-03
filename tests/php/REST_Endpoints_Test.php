@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
 namespace Automattic\Jetpack\Connection;
 
@@ -25,7 +25,7 @@ use WpOrg\Requests\Utility\CaseInsensitiveDictionary;
  * @package automattic/jetpack-connection
  * @see \Automattic\Jetpack\Connection\REST_Connector
  */
-class Test_REST_Endpoints extends TestCase {
+class REST_Endpoints_Test extends TestCase {
 	use \Yoast\PHPUnitPolyfills\Polyfills\AssertIsType;
 
 	const BLOG_TOKEN = 'new.blogtoken';
@@ -1807,8 +1807,6 @@ class Test_REST_Endpoints extends TestCase {
 		$_GET['timestamp'] = $timestamp;
 		$_GET['nonce']     = $nonce;
 		$_GET['body-hash'] = $body_hash;
-		// This is intentionally using base64_encode().
-		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 		$_GET['signature'] = base64_encode(
 			hash_hmac(
 				'sha1',

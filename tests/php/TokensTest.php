@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.NotHyphenatedLowercase
+<?php
 /**
  * Tokens functionality testing.
  *
@@ -288,7 +288,6 @@ class TokensTest extends TestCase {
 		static::assertTrue( $is_locked_site2 );
 		static::assertFalse( $is_locked_still );
 
-		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_decode
 		static::assertSame( 'https://test1.example.org', base64_decode( $lock_site_url ) );
 
 		$date = $lock_expiration ? DateTime::createFromFormat( Tokens::DATE_FORMAT_ATOM, $lock_expiration )->format( 'Y-m-d' ) : false;

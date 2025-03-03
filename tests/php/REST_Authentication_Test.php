@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.NotHyphenatedLowercase
+<?php
 /**
  * REST Authentication functionality testing.
  *
@@ -29,11 +29,22 @@ class REST_Authentication_Test extends TestCase {
 	protected $manager;
 
 	/**
+	 * Delete any cached Rest_Authentication singleton.
+	 */
+	private static function clear_auth_singleton() {
+		$reflection_class  = new \ReflectionClass( Rest_Authentication::class );
+		$instance_property = $reflection_class->getProperty( 'instance' );
+		$instance_property->setAccessible( true );
+		$instance_property->setValue( null, null );
+	}
+
+	/**
 	 * Setting up the test.
 	 *
 	 * @before
 	 */
 	public function set_up() {
+		self::clear_auth_singleton();
 		$this->rest_authentication = Rest_Authentication::init();
 
 		$this->manager = $this->getMockBuilder( Manager::class )
@@ -55,6 +66,7 @@ class REST_Authentication_Test extends TestCase {
 		$_GET = null;
 		unset( $_SERVER['REQUEST_METHOD'] );
 		$this->rest_authentication->reset_saved_auth_state();
+		self::clear_auth_singleton();
 	}
 
 	/**

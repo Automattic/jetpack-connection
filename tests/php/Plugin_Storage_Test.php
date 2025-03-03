@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Unit tests for the Connection Plugin Storage class.
  *
@@ -18,7 +18,7 @@ use WorDBless\Options as WorDBless_Options;
  *
  * @see \Automattic\Jetpack\Connection\Plugin_Storage
  */
-class Test_Plugin_Storage extends TestCase {
+class Plugin_Storage_Test extends TestCase {
 
 	/**
 	 * Whether an http request to the jetpack-active-connected-plugins endoint was attempted.

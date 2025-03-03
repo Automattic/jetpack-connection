@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.NotHyphenatedLowercase
+<?php
 /**
  * Connection Manager functionality testing.
  *
@@ -562,13 +562,13 @@ class ManagerIntegrationTest extends \WorDBless\BaseTestCase {
 	 * @see Manager::try_registration()
 	 */
 	public function test_try_registration() {
-		add_filter( 'pre_http_request', array( Test_REST_Endpoints::class, 'intercept_register_request' ), 10, 3 );
+		add_filter( 'pre_http_request', array( REST_Endpoints_Test::class, 'intercept_register_request' ), 10, 3 );
 		set_transient( 'jetpack_assumed_site_creation_date', '2021-01-01 01:01:01' );
 		Constants::set_constant( 'JETPACK__API_BASE', 'https://jetpack.wordpress.com/jetpack.' );
 
 		$result = $this->manager->try_registration();
 
-		remove_filter( 'pre_http_request', array( Test_REST_Endpoints::class, 'intercept_register_request' ), 10 );
+		remove_filter( 'pre_http_request', array( REST_Endpoints_Test::class, 'intercept_register_request' ), 10 );
 		delete_transient( 'jetpack_assumed_site_creation_date' );
 
 		static::assertTrue( $result );

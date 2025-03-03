@@ -13,7 +13,7 @@ use Automattic\Jetpack\Connection\Utils;
 use Automattic\Jetpack\Constants;
 use WorDBless\BaseTestCase;
 
-class Test_Helpers extends BaseTestCase {
+class Helpers_Test extends BaseTestCase {
 	use \Yoast\PHPUnitPolyfills\Polyfills\AssertStringContains;
 
 	protected $user_data;

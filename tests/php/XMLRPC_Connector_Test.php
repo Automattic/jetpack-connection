@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.NotHyphenatedLowercase
+<?php
 /**
  * Connection Manager functionality testing.
  *
@@ -53,7 +53,7 @@ class XMLRPC_Connector_Test extends TestCase {
 		);
 
 		openssl_sign( wp_json_encode( $url_parameters ), $signature, $private_key );
-		self::$signature = ( base64_encode( $signature ) ); // phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
+		self::$signature = ( base64_encode( $signature ) );
 	}
 
 	/**
@@ -76,7 +76,7 @@ class XMLRPC_Connector_Test extends TestCase {
 			$get_params['timestamp'] = self::$timestamp;
 		}
 
-		$old_get  = $_GET; // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+		$old_get  = $_GET;
 		$_GET     = $get_params;
 		$response = REST_Connector::is_request_signed_by_jetpack_debugger( self::$public_key );
 		$_GET     = $old_get;

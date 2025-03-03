@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
 namespace Automattic\Jetpack\Connection;
 
@@ -12,7 +12,7 @@ use WorDBless\Options as WorDBless_Options;
  *
  * @package automattic/jetpack-connection
  */
-class Test_Package_Version_Tracker extends TestCase {
+class Package_Version_Tracker_Test extends TestCase {
 
 	/**
 	 * Whether an http request to the jetpack-package-versions endoint was attempted.

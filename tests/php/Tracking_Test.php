@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Tests for Automattic\Jetpack\Tracking methods
  *
@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * Tracking test suite.
  */
-class Test_Tracking extends TestCase {
+class Tracking_Test extends TestCase {
 
 	/**
 	 * Connection manager mock object.

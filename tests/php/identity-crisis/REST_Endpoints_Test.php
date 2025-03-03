@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 
 namespace Automattic\Jetpack\IdentityCrisis;
 
@@ -18,7 +18,7 @@ use WP_REST_Server;
  *
  * @package automattic/jetpack-identity-crisis
  */
-class Test_REST_Endpoints extends TestCase {
+class REST_Endpoints_Test extends TestCase {
 
 	/**
 	 * REST Server object.
@@ -363,8 +363,6 @@ class Test_REST_Endpoints extends TestCase {
 		$_GET['timestamp'] = $timestamp;
 		$_GET['nonce']     = $nonce;
 		$_GET['body-hash'] = $body_hash;
-		// This is intentionally using base64_encode().
-		// phpcs:ignore WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode
 		$_GET['signature'] = base64_encode(
 			hash_hmac(
 				'sha1',

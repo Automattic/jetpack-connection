@@ -1,5 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
-
+<?php
 /**
  * The nonce handler tests.
  *
@@ -14,7 +13,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * The nonce handler tests.
  */
-class Test_Connection_Notice extends TestCase {
+class Connection_Notice_Test extends TestCase {
 
 	/**
 	 * Database query filter.
@@ -94,7 +93,6 @@ class Test_Connection_Notice extends TestCase {
 
 		set_transient( 'jetpack_connected_user_data_' . $id_admin2, array( 'ID' => '12345' ) );
 
-		// phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
 		$current_screen       = \WP_Screen::get();
 		$current_screen->base = 'users';
 
@@ -147,10 +145,8 @@ class Test_Connection_Notice extends TestCase {
 		delete_transient( 'jetpack_connected_user_data_' . get_current_user_id() );
 
 		unset( $current_screen );
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		unset( $_REQUEST['action'] );
 
-		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		unset( $_REQUEST['user'] );
 
 		\Jetpack_Options::delete_option( 'blog_token' );

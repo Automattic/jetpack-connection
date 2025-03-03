@@ -1,4 +1,4 @@
-<?php // phpcs:ignore WordPress.Files.FileName.InvalidClassFileName
+<?php
 /**
  * Unit tests for the Connection Plugin Manager class.
  *
@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @see \Automattic\Jetpack\Connection\Plugin
  */
-class Test_Plugin extends TestCase {
+class Plugin_Test extends TestCase {
 
 	const PLUGIN_SLUG = 'sample-plugin-slug';
 

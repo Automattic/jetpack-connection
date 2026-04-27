@@ -25,7 +25,7 @@
 		"extends @wordpress/browserslist-config"
 	],
 	"dependencies": {
-		"@automattic/jetpack-connection": "^1.4.47",
+		"@automattic/jetpack-connection": "^1.4.48-alpha",
 		"@automattic/jetpack-idc": "workspace:*",
 		"@wordpress/data": "10.44.0",
 		"@wordpress/element": "6.44.0"

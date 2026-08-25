@@ -4,21 +4,21 @@
 	"type": "jetpack-library",
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"php": ">=7.2",
-		"automattic/jetpack-a8c-mc-stats": "^3.0.10",
-		"automattic/jetpack-admin-ui": "^0.10.0",
-		"automattic/jetpack-assets": "^4.4.11",
-		"automattic/jetpack-constants": "^3.0.12",
-		"automattic/jetpack-ip": "^0.5.0",
-		"automattic/jetpack-roles": "^3.0.12",
-		"automattic/jetpack-status": "^6.5.0",
-		"automattic/jetpack-redirect": "^3.0.15"
+		"php": ">=7.4",
+		"automattic/jetpack-a8c-mc-stats": "^4.0.0-alpha",
+		"automattic/jetpack-admin-ui": "^0.11.0-alpha",
+		"automattic/jetpack-assets": "^5.0.0-alpha",
+		"automattic/jetpack-constants": "^4.0.0-alpha",
+		"automattic/jetpack-ip": "^0.6.0-alpha",
+		"automattic/jetpack-roles": "^4.0.0-alpha",
+		"automattic/jetpack-status": "^7.0.0-alpha",
+		"automattic/jetpack-redirect": "^4.0.0-alpha"
 	},
 	"require-dev": {
 		"yoast/phpunit-polyfills": "^4.0.0",
 		"brain/monkey": "^2.6.2",
-		"automattic/jetpack-wp-abilities": "^0.1.5",
-		"automattic/phpunit-select-config": "^1.0.9"
+		"automattic/jetpack-wp-abilities": "^0.2.0-alpha",
+		"automattic/phpunit-select-config": "^1.0.10-alpha"
 	},
 	"suggest": {
 		"automattic/jetpack-autoloader": "Allow for better interoperability with other plugins that use this package."
@@ -60,7 +60,7 @@
 			"link-template": "https://github.com/Automattic/jetpack-connection/compare/v${old}...v${new}"
 		},
 		"branch-alias": {
-			"dev-trunk": "8.12.x-dev"
+			"dev-trunk": "9.0.x-dev"
 		},
 		"dependencies": {
 			"test-only": [

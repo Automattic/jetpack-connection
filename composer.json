@@ -6,8 +6,8 @@
 	"require": {
 		"php": ">=7.4",
 		"automattic/jetpack-a8c-mc-stats": "^4.0.0",
-		"automattic/jetpack-admin-ui": "^0.11.1",
-		"automattic/jetpack-assets": "^5.0.1",
+		"automattic/jetpack-admin-ui": "^0.11.2-alpha",
+		"automattic/jetpack-assets": "^5.0.2-alpha",
 		"automattic/jetpack-constants": "^4.0.0",
 		"automattic/jetpack-ip": "^0.6.0",
 		"automattic/jetpack-roles": "^4.0.0",

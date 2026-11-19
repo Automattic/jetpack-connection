@@ -18,7 +18,7 @@
 	"require-dev": {
 		"yoast/phpunit-polyfills": "^4.0.0",
 		"brain/monkey": "^2.6.2",
-		"automattic/jetpack-wp-abilities": "^0.2.2",
+		"automattic/jetpack-wp-abilities": "^0.2.3-alpha",
 		"automattic/phpunit-select-config": "^1.0.12"
 	},
 	"suggest": {
